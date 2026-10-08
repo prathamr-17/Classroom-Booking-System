@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #1b2a24;
+  background: #f4f2eb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  --ink: #1b2a24;
+  --muted: #738078;
+  --green: #345c48;
+  --line: #e5e4dc;
+  --paper: #fffefa;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.auth-page { min-height: 100vh; display: grid; grid-template-columns: minmax(340px, 1fr) minmax(400px, 1fr); position: relative; }
+.auth-art { background: #344f41; color: white; position: relative; overflow: hidden; padding: 40px clamp(28px, 6vw, 88px); display: flex; flex-direction: column; justify-content: space-between; min-height: 620px; }
+.brand { display: inline-flex; align-items: center; gap: 11px; color: inherit; text-decoration: none; font-size: 17px; font-weight: 700; letter-spacing: -.5px; position: relative; z-index: 2; }
+.brand-mark { width: 32px; height: 32px; border: 1px solid currentColor; border-radius: 50%; display: inline-grid; place-items: center; font-family: "Playfair Display", serif; font-size: 18px; font-weight: 500; }
+.art-caption { position: relative; z-index: 2; margin-bottom: 50px; }
+.art-caption > span, .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 1.8px; }
+.art-caption > span { color: #c8d1c4; }
+.art-caption p { font-family: "Playfair Display", serif; font-size: clamp(38px, 5vw, 66px); line-height: 1.07; margin: 20px 0 0; }
+.art-circle { position: absolute; border: 1px solid #ffffff29; border-radius: 50%; width: 400px; height: 400px; }
+.circle-one { width: 550px; height: 550px; top: 17%; left: 27%; }
+.circle-two { width: 360px; height: 360px; top: 30%; left: 49%; background: #c3a4741c; }
+.signin-card { padding: clamp(34px, 7vw, 104px); display: flex; flex-direction: column; justify-content: center; background: #fbfaf6; }
+.signin-card .eyebrow, .welcome .eyebrow, .panel .eyebrow { color: #718274; }
+h1, h2, p { margin-top: 0; }
+.signin-card h1, .welcome h1 { font-family: "Playfair Display", serif; font-weight: 500; font-size: clamp(45px, 5.5vw, 70px); letter-spacing: -2px; line-height: 1.04; margin: 17px 0 17px; }
+h1 em { color: #788a71; font-weight: 500; }
+.intro { max-width: 370px; color: var(--muted); line-height: 1.7; font-size: 14px; margin-bottom: 30px; }
+form { display: flex; flex-direction: column; }
+label { color: #43534a; font-size: 12px; font-weight: 600; margin: 16px 0 8px; }
+label span { color: #8a958d; font-weight: 400; }
+input { color: var(--ink); background: var(--paper); border: 1px solid #dedfd7; border-radius: 5px; min-height: 46px; padding: 0 13px; outline: none; transition: border-color .18s, box-shadow .18s; }
+input::placeholder { color: #a3aaa3; }
+input:focus { border-color: #66846e; box-shadow: 0 0 0 3px #66846e1c; }
+.primary-button { margin-top: 24px; display: flex; align-items: center; justify-content: space-between; border: 0; border-radius: 5px; background: var(--green); color: white; min-height: 49px; padding: 0 16px; font-weight: 600; transition: background .2s, transform .2s; }
+.primary-button:hover:not(:disabled) { background: #264636; transform: translateY(-1px); }
+.primary-button:disabled { opacity: .65; cursor: wait; }
+.primary-button span { font-size: 18px; }
+.text-button { align-self: flex-start; border: 0; background: transparent; color: var(--green); font-size: 12px; font-weight: 600; padding: 12px 0; }
+.privacy-note { color: #8a958d; font-size: 11px; margin: 22px 0 0; }
+.form-message { color: #a14a37; font-size: 12px; line-height: 1.5; margin: 12px 0 0; }
+.page-note { position: absolute; bottom: 22px; right: 40px; color: #879188; font-size: 9px; letter-spacing: 1.4px; }
+.page-note span { padding: 0 6px; }
+.booking-page { max-width: 1200px; padding: 0 36px; margin: auto; }
+.topbar { min-height: 78px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #dfe0d8; }
+.topbar .brand-mark { color: var(--green); }
+.account { display: flex; align-items: center; gap: 22px; font-size: 12px; color: #627167; }
+.account .text-button { margin: 0; }
+.welcome { padding: 62px 0 36px; }
+.welcome h1 { font-size: clamp(48px, 6vw, 72px); margin-bottom: 12px; }
+.welcome p { color: var(--muted); font-size: 14px; }
+.booking-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 20px; align-items: start; }
+.panel { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 27px; }
+.panel-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.panel-heading h2 { font-family: "Playfair Display", serif; font-size: 25px; font-weight: 500; margin: 7px 0 15px; }
+.heading-icon { color: #bd9667; font-size: 27px; }
+.booking-form label:first-child { margin-top: 10px; }
+.booking-form input { width: 100%; }
+.time-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.booking-count { border-radius: 50%; width: 31px; height: 31px; background: #eff2ec; color: var(--green); display: grid; place-items: center; font-size: 12px; font-weight: 700; }
+.booking-list { list-style: none; padding: 0; margin: 9px 0 0; }
+.booking-item { display: flex; align-items: center; gap: 14px; padding: 16px 0; border-top: 1px solid #ecebe5; }
+.date-badge { width: 48px; min-width: 48px; height: 51px; border-radius: 5px; background: #eff2ec; color: #526c57; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.date-badge span { font-size: 10px; text-transform: uppercase; font-weight: 700; }
+.date-badge strong { font-family: "Playfair Display", serif; font-size: 20px; font-weight: 500; line-height: 1.1; }
+.booking-details { display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1; }
+.booking-details strong { font-size: 13px; }
+.booking-details span, .booking-details small { color: #78837b; font-size: 11px; }
+.cancel-button { border: 0; background: transparent; color: #929b94; font-size: 22px; line-height: 1; padding: 8px; }
+.cancel-button:hover { color: #a14a37; }
+.empty-state { padding: 58px 10px; text-align: center; color: #8b968d; }
+.empty-state > span { font-size: 29px; color: #bd9667; }
+.empty-state p { font-family: "Playfair Display", serif; font-size: 18px; line-height: 1.5; margin: 12px 0 0; }
+footer { text-align: center; padding: 30px 0; color: #909890; font-size: 10px; }
+footer span { color: #b99464; padding-left: 4px; }
+
+@media (max-width: 760px) {
+  .auth-page { grid-template-columns: 1fr; }
+  .auth-art { min-height: 225px; padding: 24px; }
+  .art-caption { margin: 46px 0 0; }
+  .art-caption p { font-size: 34px; }
+  .circle-one { width: 330px; height: 330px; top: -47%; left: 38%; }
+  .circle-two { width: 240px; height: 240px; top: -28%; left: 62%; }
+  .signin-card { padding: 38px 26px 72px; }
+  .signin-card h1 { font-size: 52px; }
+  .page-note { bottom: 18px; right: 26px; }
+  .booking-page { padding: 0 20px; }
+  .topbar { min-height: 68px; }
+  .account { gap: 10px; font-size: 11px; }
+  .welcome { padding: 43px 0 24px; }
+  .booking-layout { grid-template-columns: 1fr; }
+  .panel { padding: 22px; }
+}
+
+@media (max-width: 380px) {
+  .auth-art { min-height: 200px; }
+  .signin-card { padding: 32px 20px 70px; }
+  .account > span { max-width: 112px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+}
